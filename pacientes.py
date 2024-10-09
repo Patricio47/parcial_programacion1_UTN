@@ -27,7 +27,8 @@ def buscar_paciente(pacientes):
     for paciente in pacientes:
         if paciente[0] == numero_historia:
             print(f"Numero de historia clinica: {paciente[0]}, nombre: {paciente[1]}, edad: {paciente[2]}, diagnostico: {paciente[3]}, dias de internacion: {paciente[4]}")
-    print("paciente no encontrado.")
+        else:
+            print("paciente no encontrado.")
 
 def ordenar_pacientes(pacientes):
     """Ordena la lista de pacientes por el numero de historia clinica en forma ascendente,
