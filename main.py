@@ -6,7 +6,7 @@ from menu import *
 def main():
     """La funcion principal que ejecuta el menu interactivo"""
     opcion = None
-    while opcion != "6":
+    while opcion != "9":
         mostrar_menu()
         opcion = obtener_opcion()
         match opcion:
