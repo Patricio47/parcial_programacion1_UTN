@@ -32,16 +32,19 @@ def buscar_paciente(pacientes):
 def ordenar_pacientes(pacientes):
     """Ordena la lista de pacientes por el numero de historia clinica en forma ascendente,
     utilizando el algoritmo de burbuja"""
-    n = len(pacientes)        
-    if n > 0:
-        for i in range(n-1):
-            for j in range(0, n-i-1):
-                if pacientes[j][0] > pacientes[j+1][0]:
-                    pacientes[j], pacientes[j+1] = pacientes[j+1], pacientes[j]
-    print("Pacientes ordenados.")
-    
-    for paciente in pacientes:
-        print(f"Numero de historia clinica: {paciente[0]}, nombre: {paciente[1]}, edad: {paciente[2]}, diagnostico: {paciente[3]}, dias de internacion: {paciente[4]}")
+    if not pacientes:
+        print("No hay pacientes registrados: ")
+    else:
+        n = len(pacientes)        
+        if n > 0:
+            for i in range(n-1):
+                for j in range(0, n-i-1):
+                    if pacientes[j][0] > pacientes[j+1][0]:
+                        pacientes[j], pacientes[j+1] = pacientes[j+1], pacientes[j]
+        print("Pacientes ordenados.")
+        
+        for paciente in pacientes:
+            print(f"Numero de historia clinica: {paciente[0]}, nombre: {paciente[1]}, edad: {paciente[2]}, diagnostico: {paciente[3]}, dias de internacion: {paciente[4]}")
 
 def pacientes_mas_dias(pacientes):
     """Calcula e imprime el paciente con mas dias de internacion, mostrando sus datos completos """
